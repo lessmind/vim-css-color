@@ -493,10 +493,6 @@ if has("gui_running") || &t_Co==256
   %call s:PreviewCSSColorInLine()
   call winrestview(view)
 
-  " fix highlighting of "white" in `white-space` etc
-  " this really belongs in Vim's own syntax/css.vim ...
-  setlocal iskeyword+=-
-
   autocmd CursorMoved  <buffer> silent call s:PreviewCSSColorInLine()
   autocmd CursorMovedI <buffer> silent call s:PreviewCSSColorInLine()
 endif
